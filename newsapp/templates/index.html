@@ -7,6 +7,12 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!-- Optional theme -->
 <link href="https://fonts.googleapis.com/css?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Istok+Web&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Istok+Web|Sacramento&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+
 </head>
 <body>
 	<div style="background:url('https://images.unsplash.com/photo-1560177112-fbfd5fde9566?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat center center" class="jumbotron">
@@ -16,13 +22,14 @@
 
 	<div class="container">
 	{% for new, des, i,pub in mylist %}
-			<img src="{{ i }}" alt="">
-			<h1>News:</h1> {{ new }}
-			{{ value|linebreaks }}
+			<img style="width:350px;height:300px;"src="{{ i }}" alt="">
 
-			<h4>Description:</h4>{{ des }}
+			<p style="font-family: 'Righteous', cursive;">Title: {{ new }}</p>
+			{{value|linebreaks}}
+			<h5 style="	font-family: 'Istok Web', sans-serif;">Description:</h5><p style="	font-family: 'Istok Web', sans-serif;" >{{ des }}</p>
 			{{ value|linebreaks }}
-      <p align="rigght"> Published at:{{pub}}</p>
+      <p style="font-family: 'Great Vibes', cursive;
+"> Published at:{{pub}}</p>
       {{ value|linebreaks }}
 
 	{% endfor %}
